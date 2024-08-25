@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.company</groupId>
+    <artifactId>ruoyiPractice</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>ruoyiPractice-common</module>
+        <module>ruoyiPractice-system</module>
+        <module>ruoyiPractice-framework</module>
+        <module>ruoyiPractice-admin</module>
+        <module>ruoyiPractice-quartz</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <properties>
+        <maven.compiler.source>9</maven.compiler.source>
+        <maven.compiler.target>9</maven.compiler.target>
+        <spring-boot.version>2.7.18</spring-boot.version>
+        <mybatis-spring.version>2.1.2</mybatis-spring.version>
+        <druid-spring-boot-starter.version>1.2.23</druid-spring-boot-starter.version>
+    </properties>
+
+    <dependencyManagement>
+
+        <dependencies>
+
+            <!-- springboot 依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- mybatis 整合 spring framework -->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybatis-spring.version}</version>
+            </dependency>
+
+            <!-- 阿里数据库连接池 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-spring-boot-starter.version}</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+</project>

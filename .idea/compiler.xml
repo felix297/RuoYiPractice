@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ruoyiPractice-system" />
+        <module name="ruoyiPractice-common" />
+        <module name="ruoyiPractice-framework" />
+        <module name="ruoyiPractice-quartz" />
+        <module name="ruoyiPractice-admin" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ruoyiPractice-generator" target="9" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

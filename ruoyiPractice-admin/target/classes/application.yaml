@@ -1,0 +1,7 @@
+mybatis:
+  type-aliases-package: com.company.**.domain
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+
+spring:
+  profiles:
+    active: druid
