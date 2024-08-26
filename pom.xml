@@ -17,10 +17,11 @@
     <packaging>pom</packaging>
 
     <properties>
+        <ruoyiPractice.version>1.0-SNAPSHOT</ruoyiPractice.version>
         <maven.compiler.source>9</maven.compiler.source>
         <maven.compiler.target>9</maven.compiler.target>
         <spring-boot.version>2.7.18</spring-boot.version>
-        <mybatis-spring.version>2.1.2</mybatis-spring.version>
+        <mybatis-spring-boot-starter.version>2.1.2</mybatis-spring-boot-starter.version>
         <druid-spring-boot-starter.version>1.2.23</druid-spring-boot-starter.version>
     </properties>
 
@@ -39,9 +40,9 @@
 
             <!-- mybatis 整合 spring framework -->
             <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis-spring</artifactId>
-                <version>${mybatis-spring.version}</version>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot-starter.version}</version>
             </dependency>
 
             <!-- 阿里数据库连接池 -->
@@ -49,6 +50,25 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid-spring-boot-starter.version}</version>
+            </dependency>
+
+            <!-- 以下把各个会被其他子模块依赖的子模块：加到这里让其他模块引用的时候不用加版本号 -->
+            <dependency>
+                <groupId>com.company</groupId>
+                <artifactId>ruoyiPractice-common</artifactId>
+                <version>${ruoyiPractice.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.company</groupId>
+                <artifactId>ruoyiPractice-system</artifactId>
+                <version>${ruoyiPractice.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.company</groupId>
+                <artifactId>ruoyiPractice-framework</artifactId>
+                <version>${ruoyiPractice.version}</version>
             </dependency>
 
         </dependencies>

@@ -17,4 +17,10 @@
         <maven.compiler.target>9</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.company</groupId>
+            <artifactId>ruoyiPractice-common</artifactId>
+        </dependency>
+    </dependencies>
 </project>
