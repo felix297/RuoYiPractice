@@ -47,6 +47,18 @@ springboot 集成 mybatis
 
 在 application.yaml 中配置 mybatis 和 druid 相关信息
 
+# 获取数据库中的数据
+
+mapper 都放在 system 模块下？
+
+domain 是实体类
+
+配置类加上扫描 mapper 接口的配置（之前的配置文件只扫描了 mapper xml 文件，并没有把 mapper 接口注册成 bean）
+
+0. 谁把每个mapper加进去了？
+1. mapper 是个啥
+2. sqlsession是不是真正执行sql的那个
+3. springboot-m6ybatis并不会对mapper.xml文件上的namespace的类自动注入bean，所以对于mapper接口需要你自己注入为bean或者是用mapperscan注解
 
 # 其他
 
